@@ -1,0 +1,152 @@
+*{
+    font-family: 'Press Start 2P', cursive;
+}
+
+body{
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+header, footer{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px;
+    padding: 15px 10px 10px 10px;
+
+    display: flex;
+    justify-content: space-between;
+    min-width: 500px;
+}
+
+#temas{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+article{
+    margin: 6px;
+    padding: 3px;
+    border: 1px white double;
+    border-radius: 20px;
+    min-width: 120px;
+    text-align: center;
+}
+
+#cara{
+    width: 110px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 3px 3px;
+}
+header>h1{
+    align-self: center;
+    text-align: center;
+    display: inline;
+    font-size: 18px;
+}
+#logo{
+    width: 100px;
+    height: 100px;
+}
+
+nav {
+    background-color: yellowgreen;
+    border-radius: 20px;
+    box-shadow: 5px 5px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 95%;
+}
+nav ul{
+    list-style-image: url('carpeta.jpg'); 
+}
+aside ul{
+    list-style-image: url('archivo.png');  
+}
+
+ul li{margin: 3px 15px;}
+
+aside{
+    background-color: rgb(210, 248, 135);
+    border-radius: 20px;
+    box-shadow: 5px 5px;
+    margin: 10px 20px;
+    padding: 10px;
+    width: 90%;
+} 
+
+section{
+    margin: 5px;
+    padding: 5px;
+} 
+
+@media (min-width: 768px) {
+    body {
+        display: grid;
+        grid-template-areas:
+            'header header header header header header'
+            'nav nav nav aside aside aside '
+            'section section section section section section '
+            'footer footer footer footer footer footer ';
+        grid-gap: 10px;
+        }
+
+        header{
+            grid-area: header; 
+        }
+        nav {
+            grid-area: nav;
+        }
+        aside{
+            grid-area: aside;
+            margin: 10px 5px 5px -10px;
+        }
+        section{
+            grid-area: section;
+        }
+        footer{
+            grid-area: footer;
+        }
+
+}
+
+
+@media (min-width: 1200px) {
+    body {
+        display: grid;
+        grid-template-areas:
+            'header header header header header header'
+            'nav aside section section section section '
+            'nav aside section section section section '
+            'footer footer footer footer footer footer ';
+        grid-gap: 10px;
+        }
+  }
+
+  @media (min-width: 1300px) {
+    article{
+        margin: 10px;
+        padding: 5px;
+        border: 1px white double;
+        border-radius: 20px;
+        min-width: 180px;
+        text-align: center;
+    }
+      } 

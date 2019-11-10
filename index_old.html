@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+
+  body {
+   font: 24px Helvetica;
+   /* background: #999999; */
+  }
+
+  #main {
+   /* min-height: 800px; */
+   margin: 0px;
+   padding: 0px;
+   display: -webkit-flex;
+   display:         flex;
+   -webkit-flex-flow: row;
+           flex-flow: row;
+   }
+ 
+  #main > article {
+        font-size: 14px;
+
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #cccc33;
+   border-radius: 7pt;
+   background: #dddd88;
+   -webkit-flex: 3 1 60%;
+           flex: 3 1 60%;
+   -webkit-order: 2;
+           order: 2;
+   }
+  
+  #main > nav {
+        font-size: 12px;
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #8888bb;
+   border-radius: 7pt;
+   background: #ccccff;
+   -webkit-flex: 1 6 20%;
+           flex: 1 6 20%;
+   -webkit-order: 1;
+           order: 1;
+   }
+  
+  #main > aside {
+          font-size: 12px;
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #8888bb;
+   border-radius: 7pt;
+   background: #ccccff;
+   -webkit-flex: 1 6 20%;
+           flex: 1 6 20%;
+   -webkit-order: 3;
+           order: 3;
+   }
+ 
+  header, footer {
+        font-size: 16px;
+
+   display: block;
+   margin: 4px;
+   padding: 5px;
+   /* min-height: 100px; */
+   border: 1px solid #eebb55;
+   border-radius: 7pt;
+   background: #ffeebb;
+   }
+ 
+  /* Too narrow to support three columns */
+  @media all and (max-width: 640px) {
+  
+   #main, #page {
+    -webkit-flex-flow: column;
+            flex-flow: column;
+   }
+
+   #main > article, #main > nav, #main > aside {
+    /* Return them to document order */
+    -webkit-order: 0;
+            order: 0;
+   }
+  
+   #main > nav, #main > aside, header, footer {
+    min-height: 50px;
+    max-height: 50px;
+   }
+  }
+
+ </style>
+  </head>
+  <body>
+ <header>
+         <h1><a href="http://iesalixar.ddns.net:9100">Servidor web Dise&ntilde;o de Interfaces (DAW2) - IES ALIXAR</a>
+        </h1>
+        <h2>==> Directorio de Pedro</h2>
+</header>
+ <section id='main'>
+        <article>
+                <h2>Archivos del sitio</h2>
+                <ul>
+                        <li> 
+                            <a href="posicionamiento/posicionamiento.html">Posicionamiento</a> 
+                        </li>
+                        <li>
+                            <a href="formulario/formulario.html">Formulario</a> 
+
+                        </li>
+                        <li></li>
+                </ul>
+        </article>
+        <nav>
+                <h3>Enlaces:</h3>
+                <ul>
+                    <li>
+                        <a href="https://iesalixar.ddns.net:8006/">Servidor 
+        PROXMOX</a>
+                    </li>
+                        <li><a href="../alumnoftp">alumnoftp</a></li>
+                </ul>
+        </nav>    
+        <aside>
+                <h3>Fecha Navegador</h3>
+                <script type="text/javascript">
+                        var d = new Date();
+                        document.write('Fecha: '+d.getDate(),'<br>Dia de la semana: '+d.getDay(),'<br>Mes (0 al 11): '+d.getMonth(),'<br>Año: '+d.getFullYear(),'<br>Hora: '+d.getHours(),'<br>Hora UTC: '+d.getUTCHours(),'<br>Minutos: '+d.getMinutes(),'<br>Segundos: '+d.getSeconds());
+                </script>
+        </aside>
+ </section>
+ <footer>footer</footer>
+  </body>
+</html>

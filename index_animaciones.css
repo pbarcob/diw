@@ -1,0 +1,54 @@
+#hora {
+        background-color: #ccccff;
+        -webkit-animation-name: vuelta; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+        -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+        animation-name: vuelta;
+        animation-duration: 2s;
+        animation-iteration-count: 2;
+      }
+      
+      /* Safari 4.0 - 8.0 */
+      @-webkit-keyframes vuelta {
+        0%   {background-color:#ccccff; right:14px; top:12px;}
+        25%  {background-color:yellow; right:100px; top:12px;}
+        50%  {background-color:blue; right:100px; top:50px;}
+        75%  {background-color:red; right:14px; top:50px;}
+        100% {background-color:#ccccff; right:14px; top:12px;}
+      }
+      
+      /* Standard syntax */
+      @keyframes vuelta {
+        0%   {background-color:#ccccff; right:14px; top:12px;}
+        25%  {background-color:yellow; right:100px; top:12px;}
+        50%  {background-color:blue; right:100px; top:50px;}
+        75%  {background-color:red; right:14px; top:50px;}
+        100% {background-color:#ccccff; right:14px; top:12px;}
+      }
+
+      #hora:hover{
+        background-color: white;
+      
+        -webkit-animation-name: rotar; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+        -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+        animation-name: rotar;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+      
+      }
+      
+      /* Safari 4.0 - 8.0 */
+      @-webkit-keyframes rotar {
+        0%   {transform: rotate(0deg);}
+        50%   {transform: rotate(5deg);}
+        100%   {transform: rotate(0deg);}
+      }
+      
+      /* Standard syntax */
+      @keyframes rotar {
+        0%   {transform: rotate(0deg);}
+        50%   {transform: rotate(5deg);}
+        100%   {transform: rotate(0deg);}
+      }
+
