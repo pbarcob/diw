@@ -1,0 +1,57 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+header, footer{
+    text-align: center;
+    text-decoration: underline;
+    }
+h1{
+    border:greenyellow 10px double;
+    box-shadow: 5px 5px goldenrod;
+    }
+section {
+    background-color:darkcyan;
+    border: black 5px solid;
+    border-radius: 5px;
+    padding: 3px;
+}
+article{
+    background-color:cornsilk;
+    border: coral 3px dotted;
+    border-radius: 5px;
+    margin: 5px;
+    padding-left: 10px;
+}
+article:nth-child(odd){
+    background-color:goldenrod;
+    border: black 3px dotted;
+}
+h2{
+    text-align: center;
+    margin: 0px;
+}
+hr{
+    height: 2px;
+    border-color: coral;
+}
+form{
+    background-color:greenyellow;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+img{
+    vertical-align:bottom;
+    width: 20px;
+    height: 20px;
+}
+img:hover{
+    margin-left: 10px;
+}
+input[type=text]:focus {
+    background-color: coral;
+}
+button:active{
+    background-color: coral;
+    text-shadow: black 1px 1px;
+}

@@ -1,0 +1,53 @@
+article img {
+    float: left;
+} 
+
+/* body{
+    margin:0px;
+    padding: 0px;
+} */
+
+header{
+    background-color: blue;
+    /* position: fixed; */
+    /* position: absolute; */
+    /* position: relative; */
+    /* position: static; */
+    /* position: sticky; */
+        left: 0px;
+        top: 0px;
+        margin: 0px;
+        padding: 0px;
+    width: 100%;
+    /* z-index: 1; */
+}
+
+header h1{
+    padding: 0px;
+    margin: 0px;
+}
+
+section{
+    /* display: flex; */
+}
+
+article{
+    /* position: fixed; */
+    /* position: absolute; */
+    /* position: relative; */
+    /* position: static; */
+    /* position: sticky; */
+    width: 130px;
+    /* left: 0px;
+    top: 0px; */
+    /* float: left; */
+    /* display: flex; */
+}
+
+section hr{
+    /* clear: left; */
+}
+
+footer{
+
+}
