@@ -1,0 +1,77 @@
+*{
+    margin: 0px;
+    padding: 0px
+}
+header, footer{
+    background-color: blueviolet;
+    color: white;
+}
+header>h1 {text-align: center}
+section {            
+    background-color:tomato;
+    color: white;
+    padding: 5px;
+}
+article {            
+    background-color:white;
+    color:black;
+    margin: 10px;
+}
+#observaciones{
+    resize: horizontal;
+    /* overflow: auto;	 */
+    /* direction: rtl; */
+    cursor: crosshair;
+}
+form {
+    font-size: 16px;
+    text-align: center;
+}
+form * {
+    border: 1px dotted #999;
+    border-radius: 4px;
+}
+form *:focus{
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+form p {
+    columns: 100px 3;
+    column-gap: 30px;
+    column-rule: 4px double tomato;
+}
+
+input {
+    border: 1px dotted #999;
+    border-radius: 2px;
+    background-color: white;
+    color:black;
+}
+
+input:focus{
+    animation-name: resaltar;
+    animation-duration: 4s;
+
+}
+
+    /* Standard syntax */
+@keyframes resaltar 
+{
+    0%   {background-color: white;color:black;}
+    33%  {background-color: grey;color:red;}
+    50% {background-color: black;color: white;}
+    66%  {background-color: grey;color:red;}
+    100%   {background-color: white;color:black;}
+}
+
+form hr#fin_formulario{
+    border: 5px solid green;
+    border-radius: 5px;
+    margin-left: 25%;
+}
+form h3{
+    margin:auto;
+    font-size: 4em;
+    text-shadow: 1px 1px tomato;
+}
