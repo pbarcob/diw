@@ -1,0 +1,49 @@
+body{
+    display: grid;
+    grid-template-areas:
+        'header header header header header header'
+        'nav aside section section section section '
+        'nav aside footer footer footer footer ';
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+header { 
+    grid-area: header; 
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px;
+    padding: 15px 10px 10px 10px;
+
+}
+
+#cara,#logo {
+    border: 3px solid red;
+    border-radius: 20px;
+}
+#cara {
+    width: 105px;
+    height: 85px;
+}
+#logo {
+    width: 95px;
+    height: 85px;
+}
+header h1 {display: inline;}
+nav { 
+    grid-area: nav; 
+    background-color:black;
+    color: white;
+}
+section { 
+    grid-area: section; 
+    background-color: white;
+}
+aside { 
+    grid-area: aside; 
+    background-color: white;
+}
+footer { 
+    grid-area: footer; 
+    background-color: white;
+}
