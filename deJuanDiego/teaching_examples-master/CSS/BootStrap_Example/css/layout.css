@@ -1,0 +1,107 @@
+#apple {
+	text-align: center;
+	margin-top: 20px;
+}
+
+#imac {
+	width: 80%;
+}
+
+#header  img {
+	width: 100%;
+}
+
+.testimonial {
+	background-color: black;
+	border-radius: 10px;
+	font-style: italic;
+	padding: 10px;
+}
+
+.author {
+	color: orange;
+	text-align: right;
+	margin: 10px;
+}
+
+#leftcontent img {
+	width:50px;
+	height: 50px;
+	margin-left:25%;
+	margin-top: 20%;
+}
+
+#content, #footer {
+	background-color: #1f1e19
+}
+
+#header, #main {
+	background-color: #e95c41;
+}
+
+#content h5 {
+	color: orange;
+}
+div {
+	overflow-y: auto;
+}
+
+#content h3, #main h3 {
+	color: white;
+}
+
+#content, #footer {
+	color: #555555;
+}
+
+#content {
+	border-bottom: 1px dashed #555555;
+}
+
+#footer {
+	padding-top: 10px;
+}
+
+#header {
+	border-bottom: 1px dashed white;
+}
+
+#buy {
+	border-top: 1px dashed white;
+	border-bottom: 1px dashed white;
+	font-size: 2em;
+	text-align: center;
+	padding: 20px 0px;
+	font-weight: bolder;
+}
+
+#buy a {
+	color: white;
+	text-decoration: underline;
+}
+
+#buy input, #newsletter input[type='button'] {
+	color: white;
+	font-weight: bolder;
+  background-color: #333333;
+}
+
+#socialicons {
+	margin-top: 40px;
+}
+
+.negro {
+	background-color: black;
+	color: white;
+}
+
+.blanco {
+	color: white;
+}
+#newsletter div {
+	padding-bottom: 20px;
+}
+
+#newsletter h3 {
+	margin-left: 20px;
+}

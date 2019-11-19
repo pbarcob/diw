@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+    Author: Juan Diego Pérez @pekechis
+    E-mail: contact@jdperez.es
+    Description: HTML5 Canvas Example
+    Date: April 2015
+    Reference: http://www.w3schools.com/html/html5_canvas.asp // http://www.w3schools.com/canvas/default.asp
+    Requires: HTML & jQuery knowledge
+-->
+<html lang="">
+    <head>
+        <meta charset="UTF-8">
+        <title>CANVAS EXAMPLES 01 </title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <style>
+            #container {
+                width: 850px;
+                margin: 30px auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>CANVAS Example 01</h1>
+
+        <ul>
+            <li>Author: Juan Diego Pérez @pekechis</li>
+            <li>E-mail: contact@jdperez.es</li>
+            <li>Description: JavaScript Array Example</li>
+            <li>Date: April 2014</li>
+            <li>Reference: <a href="http://www.w3schools.com/html/html5_canvas.asp">http://www.w3schools.com/html/html5_canvas.</a> // <a href="http://www.w3schools.com/canvas/default.asp">http://www.w3schools.com/canvas/default.asp</a></li>
+            <li>Requires: HTML & jQuery knowledge</li>
+        </ul>
+
+        <!--
+             CANVAS TAGS
+             º
+        -->
+        <div id="container">
+            <h2>Text and lines</h2>
+            <canvas id="myCanvas1" width="800" height="200" style="border:1px solid #000000;"></canvas>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+        </div>
+
+        <script>
+            // document.ready
+            $(function() {
+
+
+                //Getting the jQuery Object and transforming it to JavaScript object with get(0)
+                var c = $("#myCanvas1").get(0);
+
+                //Setting the context mode - 2d for the moment
+                var ctx = c.getContext("2d");
+
+                var x1=50;
+                var y1=0;
+
+                while (x1<c.width) {
+                  ctx.moveTo(x1,y1);
+                  ctx.lineTo(x1,c.height);
+                  ctx.stroke();
+                  x1+=50; //x1=x1+50
+                }
+
+
+
+            });
+
+        </script>
+    </body>
+</html>
