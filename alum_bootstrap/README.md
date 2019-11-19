@@ -4,8 +4,8 @@
 
 ### Web's de ejemplos de Componentes Bootstrap
 
-1- Index: navbar, collapse, images, pagination, ...
-2- Breadcrumb, Acordeón, Dropdown con formulario
-3- Carrousel
-4- Cards responsive
-5- Breadcrumb y Componente que dependen de Javascript: Popover, Modal,
+1. Index: navbar, collapse, images, pagination, ...
+2. Breadcrumb, Acordeón, Dropdown con formulario
+3. Carrousel
+4. Cards responsive
+5. Breadcrumb y Componente que dependen de Javascript: Popover, Modal,
