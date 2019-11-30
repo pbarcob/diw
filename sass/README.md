@@ -5,6 +5,9 @@
 - Referenciando a los selectores padre: El carácter especial & siempre se reemplaza por el selector padre.
 - Propiedades anidadas: define varias propiedades cuyos nombres aparecen estar agrupados de
 forma lógica. Así por ejemplo con font: {family, size y weight}, las propiedades font-family, font-size y font-weight.
-- Variables: $nombre_variable. 
-  * Existen 6 tipos de datos (Números, Cadenas de texto, Colores, booleanos, null, Listas de valores, Pares formados por una clave y un valor separados por : (ejemplo
+- Variables: $nombre_variable. Existen 6 tipos de datos: 
+  * Números:
+  * Cadenas de texto:
+  * Colores:
+  * Booleanos, null, Listas de valores, Pares formados por una clave y un valor separados por : (ejemplo
 (key1: value1, key2: value2)))
