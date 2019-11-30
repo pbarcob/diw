@@ -92,6 +92,7 @@ desde esa regla hasta el primer nivel de la hoja de estilos.
 
     Como los mapas se consideran listas formadas por pares clave: 
     valor, también en este caso se puede utilizar la asignación múltiple. 
+    
     @each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
         #{$header} {
             font-size: $size;
@@ -135,4 +136,4 @@ desde esa regla hasta el primer nivel de la hoja de estilos.
   * *:compressed*: Este estilo es el más conciso de todos porque no añade ningún espacio en blanco, salvo el que sea estrictamente necesario para separar los selectores. 
 ~~~
   #main{color:#fff;background-color:#000}#main p{width:10em}.huge{fontsize:10em;font-weight:bold;text-decoration:underline}
-  ~~~
+~~~
