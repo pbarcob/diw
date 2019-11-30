@@ -34,7 +34,7 @@ desde esa regla hasta el primer nivel de la hoja de estilos.
 - **@debug**: muestra por la consola el valor de la expresión que contiene.
 - **@warn**: muestra el valor de una expresión en forma de mensaje de error
 - **Directivas de control y expresiones**: 
-  * *if()*: 
+  * *@if*: 
   ~~~
   @if $colorFondo == rojo {
     background-color: #f00;
@@ -46,3 +46,45 @@ desde esa regla hasta el primer nivel de la hoja de estilos.
     background-color: #000;
   }
   ~~~
+  * *@for*: 
+  ~~~
+    @for $i from 1 through 3 {
+    .item-#{$i} { width: 2em * $i; }
+    }
+  ~~~
+  * *@each*: 
+  ~~~
+    @each $animal in puma, sea-slug, egret, salamander {
+    .#{$animal}-icon {
+    background-image: url('/images/#{$animal}.png');
+    }
+    }
+  ~~~
+  * *@each con asignación múltiple*: 
+  ~~~
+    @each $animal, $color, $cursor in (puma, black, default),
+    (sea-slug, blue, pointer),
+    (egret, white, move) {
+    .#{$animal}-icon {
+        background-image: url('/images/#{$animal}.png');
+        border: 2px solid $color;
+        cursor: $cursor;
+        }
+    }
+
+    Como los mapas se consideran listas formadas por pares clave: valor, también en este caso se puede utilizar la asignación múltiple. 
+    @each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
+        #{$header} {
+            font-size: $size;
+        }
+    }
+  ~~~
+  * *@while*: 
+  ~~~
+    $i: 6;
+    @while $i > 0 {
+    .item-#{$i} { width: 2em * $i; }
+    $i: $i - 2;
+    }
+  ~~~
+- **mixin**: permiten definir estilos reutilizables en toda la hoja de estilos, admiten el uso de argumentos. Estos pueden estar formados por cualquier expresión y estarán disponibles en el interior del mixin en forma devariables, como si fueran funciones. Los mixins se incluyen en las hojas de estilos mediante la directiva @include. Pueden incluir en su interior otros mixins
