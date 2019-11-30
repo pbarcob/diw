@@ -13,4 +13,11 @@ forma lógica. Así por ejemplo con font: {family, size y weight}, defines las p
   * Nulo: null.
   * Listas de valores: son  una colección de valores separados por comas o espacios en blanco. Se utilizan en las propiedades CSS como margin: 10px 15px 0 0. Su utilidad se aplica mediantes funciones (nth(), join(), append(), etc)
   * Mapas: Pares formados por una clave y un valor separados por ejemplo - $map: (clave1: valor1, clave2: valor2, clave3: valor3);)
-- Operadores
+- Operadores: Todos los tipos de datos soportan el operador de igualdad (== y !=) para comprobar si dos valores son iguales o distintos. 
+  * Aritméticos básicos: suma +, resta -,
+multiplicación *, división / y módulo %.
+  * Operadores para cadenas de texto: + concatenar. Dentro #{ } para realizar operaciones e incluirlas en la cadena. Esta característica se llama "interpolación de cadenas de texto".
+  * Operadores para colores: se pueden realizar operaciones artiméticas y en ese caso se aplica por cada componente del color.
+  * Operadores para booleanos:  and, or y not.
+  *  Operadores para listas: No hay, se manipulan mediante las funciones.
+- Funciones
