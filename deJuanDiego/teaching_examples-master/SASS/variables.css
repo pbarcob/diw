@@ -1,10 +1,12 @@
 .contenedor {
-  width: 1024px; }
+  width: 1024px;
+}
 
 h1, h2, h3, p {
-  color: red; }
+  color: red;
+}
 
 h6.c {
-  color: red; }
-
+  color: red;
+}
 /*# sourceMappingURL=variables.css.map */

@@ -1,3 +1,12 @@
+@charset "UTF-8";
+/* Resumen con ejemplos generados con SASS 
+__________________________
+
+
+ Reglas anidadas 
+ _______________
+ A los selectores anidados se les prefija automáticamente todos los selectores de los niveles superiores
+ */
 #main {
   width: 97%;
 }
@@ -14,6 +23,8 @@
   font-size: 3em;
 }
 
+/* Referenciando a los selectores padre 
+_______________________*/
 a {
   font-weight: bold;
   text-decoration: none;
@@ -25,5 +36,32 @@ a:hover {
 
 body.firefox a {
   font-weight: normal;
+}
+
+#main {
+  color: black;
+}
+
+#main-sidebar {
+  border: 1px solid;
+}
+
+/* Propiedades anidadas */
+.funky {
+  font-family: fantasy;
+  font-size: 30em;
+  font-weight: bold;
+}
+
+.funky {
+  font: 2px/3px;
+  font-family: fantasy;
+  font-size: 30em;
+  font-weight: bold;
+}
+
+/* Variables */
+#main {
+  width: 5em;
 }
 /*# sourceMappingURL=resumen_con_ejemplos_SASS.css.map */

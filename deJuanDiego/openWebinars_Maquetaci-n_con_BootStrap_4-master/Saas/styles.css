@@ -14,10 +14,12 @@ ul {
   font-size: 1.2rem;
   color: red;
 }
+
 ul ul {
   font-size: 0.7rem;
   color: green;
 }
+
 ul ul ul {
   font-size: 0.5rem;
   color: blue;
@@ -28,10 +30,12 @@ a {
   text-decoration: none;
   font-size: 1.2rem;
 }
+
 a:hover {
   color: green;
   text-decoration: underline;
 }
+
 a:focus {
   color: red;
   text-decoration: none;
@@ -54,9 +58,6 @@ a:focus {
 }
 
 .box {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
   border-radius: 5px;
 }
 
@@ -65,7 +66,7 @@ a:focus {
 }
 
 .col-3 {
-  width: "33.3333333333%";
+  width: "33.33333%";
 }
 
 .col-4 {
@@ -77,11 +78,11 @@ a:focus {
 }
 
 .col-6 {
-  width: "16.6666666667%";
+  width: "16.66667%";
 }
 
 .col-7 {
-  width: "14.2857142857%";
+  width: "14.28571%";
 }
 
 .col-8 {
@@ -89,7 +90,7 @@ a:focus {
 }
 
 .col-9 {
-  width: "11.1111111111%";
+  width: "11.11111%";
 }
 
 .col-10 {
@@ -97,11 +98,11 @@ a:focus {
 }
 
 .col-11 {
-  width: "9.0909090909%";
+  width: "9.09091%";
 }
 
 .col-12 {
-  width: "8.3333333333%";
+  width: "8.33333%";
 }
 
 .col-while-2 {
@@ -109,7 +110,7 @@ a:focus {
 }
 
 .col-while-3 {
-  width: "33.3333333333%";
+  width: "33.33333%";
 }
 
 .col-while-4 {
@@ -121,11 +122,11 @@ a:focus {
 }
 
 .col-while-6 {
-  width: "16.6666666667%";
+  width: "16.66667%";
 }
 
 .col-while-7 {
-  width: "14.2857142857%";
+  width: "14.28571%";
 }
 
 .col-while-8 {
@@ -133,7 +134,7 @@ a:focus {
 }
 
 .col-while-9 {
-  width: "11.1111111111%";
+  width: "11.11111%";
 }
 
 .col-while-10 {
@@ -141,11 +142,10 @@ a:focus {
 }
 
 .col-while-11 {
-  width: "9.0909090909%";
+  width: "9.09091%";
 }
 
 .col-while-12 {
-  width: "8.3333333333%";
+  width: "8.33333%";
 }
-
 /*# sourceMappingURL=styles.css.map */
