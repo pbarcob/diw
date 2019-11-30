@@ -35,6 +35,7 @@ desde esa regla hasta el primer nivel de la hoja de estilos.
 - **@warn**: muestra el valor de una expresión en forma de mensaje de error
 - **Directivas de control y expresiones**: 
   * *if()*: 
+  ~~~
   @if $colorFondo == rojo {
     background-color: #f00;
   } @else if $colorFondo == verde {
@@ -44,3 +45,4 @@ desde esa regla hasta el primer nivel de la hoja de estilos.
   } @else {
     background-color: #000;
   }
+  ~~~
