@@ -21,7 +21,25 @@ multiplicación *, división / y módulo %.
   * *Operadores para colores*: se pueden realizar operaciones artiméticas y en ese caso se aplica por cada componente del color.
   * Operadores para booleanos:  *and, or y not*.
   * *Operadores para listas*: No hay, se manipulan mediante las funciones.
-- **Funciones**: Existen muchas funciones predefinidas.
+- **Funciones**: Existen muchas funciones predefinidas además de poder definir las que queramos mediante la directiva @function. El contenido de una función puede estar formado por varias líneas, pero siempre debe acabar con una directiva de tipo @return para devolver el resultado de su ejecución.
+  ~~~
+    $grid-width: 40px;
+    $gutter-width: 10px;
+
+    @function grid-width($n) {
+        @return $n * $grid-width + ($n - 1) * $gutter-width;
+    }
+
+    #sidebar { width: grid-width(5); }
+
+    El código Sass anterior se compila de la siguiente manera:
+
+    #sidebar {
+        width: 240px;
+    }
+
+
+  ~~~
 - **Interpolación**: llamadas y uso del valor de las variables #{$variable} en los nombres de los selectores, en las propiedades, en los valores de las propiedades.
 - **@import**:  importar archivos SCSS y Sass. Si no se indica la extensión busca un archivo con ese nombre y con las extensiones .scss o .sass. Ejemplo @import "foo.scss"; importa el archivo foo.scss. Permite importar varios archivos separados por ",". Normalmente las reglas @import se colocan en el primer nivel jerárquico de la
 hoja de estilos:
@@ -72,7 +90,8 @@ desde esa regla hasta el primer nivel de la hoja de estilos.
         }
     }
 
-    Como los mapas se consideran listas formadas por pares clave: valor, también en este caso se puede utilizar la asignación múltiple. 
+    Como los mapas se consideran listas formadas por pares clave: 
+    valor, también en este caso se puede utilizar la asignación múltiple. 
     @each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
         #{$header} {
             font-size: $size;
@@ -88,3 +107,32 @@ desde esa regla hasta el primer nivel de la hoja de estilos.
     }
   ~~~
 - **mixin**: permiten definir estilos reutilizables en toda la hoja de estilos, admiten el uso de argumentos. Estos pueden estar formados por cualquier expresión y estarán disponibles en el interior del mixin en forma devariables, como si fueran funciones. Los mixins se incluyen en las hojas de estilos mediante la directiva @include. Pueden incluir en su interior otros mixins
+- **Formato de salida**: Sass permite elegir entre cuatro formatos diferentes mediante la opción de configuración :style o mediante la opción --style de la consola de comandos. Son:
+  * *:nested*: Este es el estilo por defecto de Sass, que indenta y anida todos los selectores y estilos para reflejar fielmente la estructura del archivo Sass original.
+~~~
+#main {
+    color: #fff;
+    background-color: #000; }
+    #main p {
+        width: 10em; }
+~~~
+
+  * *:expanded*: Este estilo es más parecido al que utilizaría un diseñador/a al crear manualmente la hoja de estilos CSS. Cada propiedad y cada regla se muestran en una nueva línea, pero las reglas no se indentan de ninguna manera especial.
+  ~~~
+#main {
+    color: #fff;
+    background-color: #000;
+}
+#main p {
+    width: 10em; 
+}
+~~~
+  * *:compact*: Este estilo ocupa menos líneas que los estilos nested o expanded y prioriza los selectores por encima de las propiedades. De hecho, cada regla CSS solamente ocupa una línea, donde se definen todas las propiedades.
+~~~
+#main { color: #fff; background-color: #000; }
+#main p { width: 10em; }
+~~~
+  * *:compressed*: Este estilo es el más conciso de todos porque no añade ningún espacio en blanco, salvo el que sea estrictamente necesario para separar los selectores. 
+~~~
+  #main{color:#fff;background-color:#000}#main p{width:10em}.huge{fontsize:10em;font-weight:bold;text-decoration:underline}
+  ~~~
