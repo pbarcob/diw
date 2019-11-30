@@ -1,0 +1,23 @@
+/// Resumen con ejemplos SASS
+
+/// Reglas anidadas
+/// A los selectores anidados se les prefija automáticamente todos los selectores de los niveles superiores
+#main {
+    width: 97%;
+    p, div {
+    font-size: 2em;
+    a { font-weight: bold; }
+    }
+    pre { font-size: 3em; }
+   }
+
+/// Referenciando a los selectores padre
+/// El carácter especial & siempre se reemplaza por el selector padre
+   a {
+    font-weight: bold;
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+    body.firefox & { font-weight: normal; }
+   }
+   
+   
