@@ -119,7 +119,6 @@ desde esa regla hasta el primer nivel de la hoja de estilos.
     #main p {
         width: 10em; }
 ~~~
-
   * *:expanded*: Este estilo es más parecido al que utilizaría un diseñador/a al crear manualmente la hoja de estilos CSS. Cada propiedad y cada regla se muestran en una nueva línea, pero las reglas no se indentan de ninguna manera especial.
   ~~~
 #main {
