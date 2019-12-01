@@ -119,6 +119,8 @@ desde esa regla hasta el primer nivel de la hoja de estilos.
         style: dashed;
       }
     }  
+
+    p { @include sexy-border(blue, 1in); }
   ~~~
 - **Formato de salida**: Sass permite elegir entre cuatro formatos diferentes mediante la opción de configuración :style o mediante la opción --style de la consola de comandos. Son:
       * *:nested*: Este es el estilo por defecto de Sass, que indenta y anida todos los selectores y estilos para reflejar fielmente la estructura del archivo Sass original.
