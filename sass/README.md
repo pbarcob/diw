@@ -1,6 +1,8 @@
-# Resumen con ejemplos SASS
+# Resumen con ejemplos [SASSDOC](http://sassdoc.com/)
+### Realizado tomando como base el siguiente [manual](https://webkode.es/wp-content/uploads/docs/css/7_Manual_de_sass.pdf)
 
-- **Comentarios**: Para que salga en el CSS /*Comentario*/, de una linea y no sale en CSS //.
+
+- **Comentarios**: Para que salga en el CSS /*Comentario*/, de una linea y no sale en CSS //. Si se va a usar [SASSDOC](http://sassdoc.com/) para generar documentación automáticamente se debe usar /// o //// para que los comentarios aparezcan en esa documentación generada por SASSDOC. Dentro de los comentarios de SassDoc podemos añadir anotaciones que nos van a permitir dotar de significado a ciertos elementos de la documentación, agrupar elementos o simplemente darles un formato diferente (entre muchas otras cosas). Estas anotaciones comienzan por el carácter @ y su lista completa es la [siguiente](http://sassdoc.com/annotations/).
 - **Reglas anidadas**: A los selectores anidados se les prefija automáticamente todos los selectores de los niveles superiores.
 - Referenciando a los selectores padre: El carácter especial **&** siempre se reemplaza por el selector padre.
 - **Propiedades anidadas**: define varias propiedades cuyos nombres aparecen estar agrupados de
