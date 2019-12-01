@@ -4,8 +4,6 @@
 $bg_body:white;
 $bg_header:red;
 $bg_footer:blue;
-$nav_width: 20%;
-$section_width: 60%;
 
 /* Mixin con argumento */
 //------------
@@ -16,32 +14,95 @@ $section_width: 60%;
     padding: $padding;
    }
 
+   @mixin size-width-height($width, $height) {
+       width: $width;
+       height: $height;
+   }
+
+
+
 /* Estilos de elementos */
 //----------------------
 
 body{
     background-color: $bg_body;
+    display: grid;
+    grid-template-areas:
+        'header header header header header header'
+        'nav section section section section section '
+        'footer footer footer footer footer footer ';
+    grid-gap: 5px;
+
 }
 
 header{
-    @include bg_color-border-margin-padding($bg_header, 2px, solid, green, 5px, 10px);
+    grid-area: header; 
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-flex-flow: row;
+            flex-flow: row;
+            flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: space-between;
+            justify-content: space-between;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+    
+    @include bg_color-border-margin-padding($bg_header, 10px, solid, green, 5px, 10px);
+
+    div img {
+       @include size-width-height(100px,100px);
+    }
 }
 
 nav{
-    float: left;
-    @include bg_color-border-margin-padding($bg_body, 15px, dashed, orange, 25px, 15px);
-    width: $nav_width;
+    grid-area: nav; 
+    @include bg_color-border-margin-padding($bg_body, 5px, dashed, orange, 0px, 5px);
+
+    p{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    ul 
+    {
+        padding: 0px;
+        margin: 0px;
+        li{
+            @include bg_color-border-margin-padding($bg_body, 5px, solid, pink, 2px, 4px);
+            list-style: none;
+        }
+    }
 }
 
 section{    
-    float: left;
-    @include bg_color-border-margin-padding($bg_body, 15px, dashed, blue, 5px, 15px);
+    grid-area: section; 
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-flex-flow: row;
+            flex-flow: row;
+            flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: space-around;
+            justify-content: space-around;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
 
-    width: $section_width;
+    @include bg_color-border-margin-padding($bg_body, 5px, dashed, blue, 0px, 15px);
+
+    article{
+        @include bg_color-border-margin-padding($bg_body, 2px, dashed, black, 10px, 5px);
+        img{
+            @include size-width-height(50px,30px);
+        }
+    }
+
 }
 
 footer{
-    clear: both;
+    grid-area: footer; 
     @include bg_color-border-margin-padding($bg_footer, 5px, dotted, yellow, 15px, 5px);
 }
 

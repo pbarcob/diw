@@ -3,35 +3,113 @@
 /* Estilos de elementos */
 body {
   background-color: white;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'header header header header header header' 'nav section section section section section ' 'footer footer footer footer footer footer ';
+  grid-gap: 5px;
 }
 
 header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
   background-color: red;
-  border: 2px solid green;
+  border: 10px solid green;
   margin: 5px;
   padding: 10px;
 }
 
+header div img {
+  width: 100px;
+  height: 100px;
+}
+
 nav {
-  float: left;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: nav;
   background-color: white;
-  border: 15px dashed orange;
-  margin: 25px;
-  padding: 15px;
-  width: 20%;
+  border: 5px dashed orange;
+  margin: 0px;
+  padding: 5px;
+}
+
+nav p {
+  text-align: center;
+  font-size: 30px;
+}
+
+nav ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+nav ul li {
+  background-color: white;
+  border: 5px solid pink;
+  margin: 2px;
+  padding: 4px;
+  list-style: none;
 }
 
 section {
-  float: left;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 5;
+  grid-area: section;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
   background-color: white;
-  border: 15px dashed blue;
-  margin: 5px;
+  border: 5px dashed blue;
+  margin: 0px;
   padding: 15px;
-  width: 60%;
+}
+
+section article {
+  background-color: white;
+  border: 2px dashed black;
+  margin: 10px;
+  padding: 5px;
+}
+
+section article img {
+  width: 50px;
+  height: 30px;
 }
 
 footer {
-  clear: both;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-area: footer;
   background-color: blue;
   border: 5px dotted yellow;
   margin: 15px;
