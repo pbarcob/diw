@@ -1,0 +1,13 @@
+/* Variables */
+//------------
+
+$bg_body:white;
+$bg_header:red;
+
+body{
+    background-color: $bg_body;
+}
+
+header{
+    background-color: $bg_header;
+}

@@ -110,31 +110,41 @@ desde esa regla hasta el primer nivel de la hoja de estilos.
     }
   ~~~
 - **mixin**: permiten definir estilos reutilizables en toda la hoja de estilos, admiten el uso de argumentos. Estos pueden estar formados por cualquier expresión y estarán disponibles en el interior del mixin en forma devariables, como si fueran funciones. Los mixins se incluyen en las hojas de estilos mediante la directiva @include. Pueden incluir en su interior otros mixins
-- **Formato de salida**: Sass permite elegir entre cuatro formatos diferentes mediante la opción de configuración :style o mediante la opción --style de la consola de comandos. Son:
-  * *:nested*: Este es el estilo por defecto de Sass, que indenta y anida todos los selectores y estilos para reflejar fielmente la estructura del archivo Sass original.
-~~~
-#main {
-    color: #fff;
-    background-color: #000; }
-    #main p {
-        width: 10em; }
-~~~
-  * *:expanded*: Este estilo es más parecido al que utilizaría un diseñador/a al crear manualmente la hoja de estilos CSS. Cada propiedad y cada regla se muestran en una nueva línea, pero las reglas no se indentan de ninguna manera especial.
+  * *Ejemplo de mixin con argumento*:
   ~~~
-#main {
-    color: #fff;
-    background-color: #000;
-}
-#main p {
-    width: 10em; 
-}
-~~~
+    @mixin sexy-border($color, $width) {
+      border: {
+        color: $color;
+        width: $width;
+        style: dashed;
+      }
+    }  
+  ~~~
+- **Formato de salida**: Sass permite elegir entre cuatro formatos diferentes mediante la opción de configuración :style o mediante la opción --style de la consola de comandos. Son:
+      * *:nested*: Este es el estilo por defecto de Sass, que indenta y anida todos los selectores y estilos para reflejar fielmente la estructura del archivo Sass original.
+  ~~~
+    #main {
+        color: #fff;
+        background-color: #000; }
+        #main p {
+            width: 10em; }
+  ~~~
+      * *:expanded*: Este estilo es más parecido al que utilizaría un diseñador/a al crear manualmente la hoja de estilos CSS. Cada propiedad y cada regla se muestran en una nueva línea, pero las reglas no se indentan de ninguna manera especial.
+  ~~~
+    #main {
+        color: #fff;
+        background-color: #000;
+    }
+    #main p {
+        width: 10em; 
+    }
+  ~~~
   * *:compact*: Este estilo ocupa menos líneas que los estilos nested o expanded y prioriza los selectores por encima de las propiedades. De hecho, cada regla CSS solamente ocupa una línea, donde se definen todas las propiedades.
-~~~
-#main { color: #fff; background-color: #000; }
-#main p { width: 10em; }
-~~~
+  ~~~
+    #main { color: #fff; background-color: #000; }
+    #main p { width: 10em; }
+  ~~~
   * *:compressed*: Este estilo es el más conciso de todos porque no añade ningún espacio en blanco, salvo el que sea estrictamente necesario para separar los selectores. 
-~~~
-  #main{color:#fff;background-color:#000}#main p{width:10em}.huge{fontsize:10em;font-weight:bold;text-decoration:underline}
-~~~
+  ~~~
+    #main{color:#fff;background-color:#000}#main p{width:10em}.huge{fontsize:10em;font-weight:bold;text-decoration:underline}
+  ~~~
