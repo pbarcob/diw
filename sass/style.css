@@ -1,9 +1,40 @@
 /* Variables */
+/* Mixin con argumento */
+/* Estilos de elementos */
 body {
   background-color: white;
 }
 
 header {
   background-color: red;
+  border: 2px solid green;
+  margin: 5px;
+  padding: 10px;
+}
+
+nav {
+  float: left;
+  background-color: white;
+  border: 15px dashed orange;
+  margin: 25px;
+  padding: 15px;
+  width: 20%;
+}
+
+section {
+  float: left;
+  background-color: white;
+  border: 15px dashed blue;
+  margin: 5px;
+  padding: 15px;
+  width: 60%;
+}
+
+footer {
+  clear: both;
+  background-color: blue;
+  border: 5px dotted yellow;
+  margin: 15px;
+  padding: 5px;
 }
 /*# sourceMappingURL=style.css.map */

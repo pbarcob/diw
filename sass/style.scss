@@ -3,11 +3,45 @@
 
 $bg_body:white;
 $bg_header:red;
+$bg_footer:blue;
+$nav_width: 20%;
+$section_width: 60%;
+
+/* Mixin con argumento */
+//------------
+@mixin bg_color-border-margin-padding($bg_color, $border_size, $border_style, $border_color,  $margin, $padding) {
+    background-color: $bg_color;
+    border: $border_size $border_style $border_color ;
+    margin: $margin;
+    padding: $padding;
+   }
+
+/* Estilos de elementos */
+//----------------------
 
 body{
     background-color: $bg_body;
 }
 
 header{
-    background-color: $bg_header;
+    @include bg_color-border-margin-padding($bg_header, 2px, solid, green, 5px, 10px);
 }
+
+nav{
+    float: left;
+    @include bg_color-border-margin-padding($bg_body, 15px, dashed, orange, 25px, 15px);
+    width: $nav_width;
+}
+
+section{    
+    float: left;
+    @include bg_color-border-margin-padding($bg_body, 15px, dashed, blue, 5px, 15px);
+
+    width: $section_width;
+}
+
+footer{
+    clear: both;
+    @include bg_color-border-margin-padding($bg_footer, 5px, dotted, yellow, 15px, 5px);
+}
+
