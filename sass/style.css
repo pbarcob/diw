@@ -1,8 +1,10 @@
+/* Funcion color aleatorio */
 /* Variables */
+/* Color de fondo aleatorio generado por funcion color_aleat rgb(3,54,184) */
 /* Mixin con argumento */
 /* Estilos de elementos */
 body {
-  background-color: white;
+  background-color: rgb(220,190,164);
   display: -ms-grid;
   display: grid;
       grid-template-areas: 'header header header header header header' 'nav section section section section section ' 'footer footer footer footer footer footer ';
@@ -33,35 +35,64 @@ header {
   border: 10px solid green;
   margin: 5px;
   padding: 10px;
+  border-radius: 10px;
 }
 
 header div img {
   width: 100px;
   height: 100px;
+  border-radius: 10px;
 }
 
 nav {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: nav;
-  background-color: white;
+  background-color: rgb(220,190,164);
   border: 5px dashed orange;
   margin: 0px;
   padding: 5px;
 }
 
 nav p {
+  /* Parrafo color */
+  color: red;
   text-align: center;
   font-size: 30px;
 }
 
 nav ul {
+  /* FOR Color fondo li #0a6400 */
   padding: 0px;
   margin: 0px;
 }
 
+nav ul li:nth-child(3n + 1) {
+  background-color: #0f9700;
+}
+
+nav ul li:nth-child(3n + 2) {
+  background-color: #14ca00;
+}
+
+nav ul li:nth-child(3n + 3) {
+  background-color: #19fd00;
+}
+
+nav ul li:nth-child(3n + 4) {
+  background-color: #46ff31;
+}
+
+nav ul li:nth-child(3n + 5) {
+  background-color: #74ff64;
+}
+
+nav ul li:nth-child(3n + 6) {
+  background-color: #a1ff97;
+}
+
 nav ul li {
-  background-color: white;
+  background-color: rgb(220,190,164);
   border: 5px solid pink;
   margin: 2px;
   padding: 4px;
@@ -87,14 +118,14 @@ section {
   -ms-flex-align: center;
   -webkit-box-align: center;
           align-items: center;
-  background-color: white;
+  background-color: rgb(220,190,164);
   border: 5px dashed blue;
   margin: 0px;
   padding: 15px;
 }
 
 section article {
-  background-color: white;
+  background-color: rgb(220,190,164);
   border: 2px dashed black;
   margin: 10px;
   padding: 5px;
@@ -110,6 +141,7 @@ footer {
   -ms-grid-column: 1;
   -ms-grid-column-span: 6;
   grid-area: footer;
+  text-align: center;
   background-color: blue;
   border: 5px dotted yellow;
   margin: 15px;

@@ -1,9 +1,24 @@
+/* Funcion color aleatorio */
+//------------
+@function color_aleat{
+    //Funcion random para cada color
+    $rojo: random(255);
+    $verde: random(255);
+    $azul: random(255);
+    //Concatenar cadenas
+    $color_aleat: "rgb(" + $rojo + "," + $verde + "," + $azul + ")";
+    @return unquote($color_aleat);
+}
+
 /* Variables */
 //------------
-
-$bg_body:white;
+/* Color de fondo aleatorio generado por funcion color_aleat #{color_aleat()} */
+$bg_body:color_aleat();
 $bg_header:red;
 $bg_footer:blue;
+
+
+
 
 /* Mixin con argumento */
 //------------
@@ -18,7 +33,6 @@ $bg_footer:blue;
        width: $width;
        height: $height;
    }
-
 
 
 /* Estilos de elementos */
@@ -50,23 +64,49 @@ header{
             align-items: center;
     
     @include bg_color-border-margin-padding($bg_header, 10px, solid, green, 5px, 10px);
+    border-radius: 10px;
 
     div img {
        @include size-width-height(100px,100px);
+     border-radius: 10px;
     }
 }
 
 nav{
     grid-area: nav; 
     @include bg_color-border-margin-padding($bg_body, 5px, dashed, orange, 0px, 5px);
-
+ 
     p{
+        // USO DE IF
+        /* Parrafo color */
+        $modulo_color: matador;
+        @if $modulo_color == ocean {
+            color: blue;
+        } @else if $modulo_color == matador {
+            color: red;
+        } @else if $modulo_color == monster {
+            color: green;
+        } @else {
+            color: black;
+        }
+
         text-align: center;
         font-size: 30px;
     }
 
     ul 
     {
+        $base-color: rgb(10, 100, 0);
+    /* FOR Color fondo li #{$base-color} */
+    // Ejemplo de interpolacion de variable
+    //----------------------
+
+        @for $i from 1 through 6 {
+            li:nth-child(3n + #{$i}) {
+            background-color: lighten($base-color, $i * 10%);
+            }
+        }
+
         padding: 0px;
         margin: 0px;
         li{
@@ -103,6 +143,7 @@ section{
 
 footer{
     grid-area: footer; 
+    text-align: center;
     @include bg_color-border-margin-padding($bg_footer, 5px, dotted, yellow, 15px, 5px);
 }
 
