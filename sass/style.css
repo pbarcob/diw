@@ -1,10 +1,7 @@
-/* Funcion color aleatorio */
 /* Variables */
-/* Color de fondo aleatorio generado por funcion color_aleat rgb(3,54,184) */
-/* Mixin con argumento */
 /* Estilos de elementos */
 body {
-  background-color: rgb(220,190,164);
+  background-color: rgb(67,195,156);
   display: -ms-grid;
   display: grid;
       grid-template-areas: 'header header header header header header' 'nav section section section section section ' 'footer footer footer footer footer footer ';
@@ -48,7 +45,7 @@ nav {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: nav;
-  background-color: rgb(220,190,164);
+  background-color: rgb(67,195,156);
   border: 5px dashed orange;
   margin: 0px;
   padding: 5px;
@@ -92,7 +89,7 @@ nav ul li:nth-child(3n + 6) {
 }
 
 nav ul li {
-  background-color: rgb(220,190,164);
+  background-color: rgb(67,195,156);
   border: 5px solid pink;
   margin: 2px;
   padding: 4px;
@@ -118,14 +115,14 @@ section {
   -ms-flex-align: center;
   -webkit-box-align: center;
           align-items: center;
-  background-color: rgb(220,190,164);
+  background-color: rgb(67,195,156);
   border: 5px dashed blue;
   margin: 0px;
   padding: 15px;
 }
 
 section article {
-  background-color: rgb(220,190,164);
+  background-color: rgb(67,195,156);
   border: 2px dashed black;
   margin: 10px;
   padding: 5px;

@@ -1,5 +1,11 @@
-/* Funcion color aleatorio */
-//------------
+/// Funcion color aleatorio. Devuelve un color al azar en el formato rgb(71,148,133)
+/// @name color_aleat
+/// @access public
+/// @author Pedro Barco
+/// @example scss - color_aleat();
+/// rgb(71,148,133)
+/// @return {color}
+
 @function color_aleat{
     //Funcion random para cada color
     $rojo: random(255);
@@ -12,16 +18,42 @@
 
 /* Variables */
 //------------
-/* Color de fondo aleatorio generado por funcion color_aleat #{color_aleat()} */
+/// Variable $bg_body para el color de fondo del body aleatoria procedente de la funcion color_aleat()
+/// @name bg_body
+/// @type color
+/// @access public
+/// @author Pedro Barco
+/// @example scss - $bg_body;
+/// rgb(71,148,133)
 $bg_body:color_aleat();
+
+/// Variable bg_header para el color de fondo del header 
+/// @name bg_header
+/// @type color
+/// @access public
+/// @author Pedro Barco
 $bg_header:red;
+
+/// Variable bg_footer para el color de fondo del footer 
+/// @name bg_footer
+/// @type color
+/// @access public
+/// @author Pedro Barco
 $bg_footer:blue;
 
 
 
 
-/* Mixin con argumento */
-//------------
+/// Mixin bg_color-border-margin-padding para definir color de fondo, borde, margin y padding
+/// @name bg_color-border-margin-padding
+/// @access public
+/// @author Pedro Barco
+/// @param {color} $bg_color [default value] - Color de fondo
+/// @param {number} $border_size [default value] - Tamaño del borde
+/// @param {border_style} $border_style [default value] - Estilo del borde
+/// @param {color} $border_color [default value] - Color del borde
+/// @param {number} $margin [default value] - Margin
+/// @param {number} $padding [default value] - Padding
 @mixin bg_color-border-margin-padding($bg_color, $border_size, $border_style, $border_color,  $margin, $padding) {
     background-color: $bg_color;
     border: $border_size $border_style $border_color ;
@@ -29,7 +61,13 @@ $bg_footer:blue;
     padding: $padding;
    }
 
-   @mixin size-width-height($width, $height) {
+/// Mixin size-width-height para definir tamaño de un elemento
+/// @name size-width-height para definir
+/// @access public
+/// @author Pedro Barco
+/// @param {number} $width [default value] - ancho
+/// @param {number} $height [default value] - alto
+@mixin size-width-height($width, $height) {
        width: $width;
        height: $height;
    }
@@ -99,7 +137,7 @@ nav{
         $base-color: rgb(10, 100, 0);
     /* FOR Color fondo li #{$base-color} */
     // Ejemplo de interpolacion de variable
-    //----------------------
+    //----------ss------------
 
         @for $i from 1 through 6 {
             li:nth-child(3n + #{$i}) {
