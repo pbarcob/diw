@@ -5,7 +5,7 @@
 /// @example scss - color_aleat();
 /// rgb(71,148,133)
 /// @return {color}
-
+ 
 @function color_aleat(){
     //Funcion random para cada color
     $rojo: random(255);
