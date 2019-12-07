@@ -1,5 +1,6 @@
 # Resumen con ejemplos [SASSDOC](http://sassdoc.com/)
 ### Realizado tomando como base el siguiente [manual](https://webkode.es/wp-content/uploads/docs/css/7_Manual_de_sass.pdf)
+### Se han añadido ejemplos de uso de comentarios para SASSDOC
 
 
 - **Comentarios**: Para que salga en el CSS /*Comentario*/, de una linea y no sale en CSS //. Si se va a usar [SASSDOC](http://sassdoc.com/) para generar documentación automáticamente se debe usar /// o //// para que los comentarios aparezcan en esa documentación generada por SASSDOC. Dentro de los comentarios de SassDoc podemos añadir anotaciones que nos van a permitir dotar de significado a ciertos elementos de la documentación, agrupar elementos o simplemente darles un formato diferente (entre muchas otras cosas). Estas anotaciones comienzan por el carácter @ y su lista completa es la [siguiente](http://sassdoc.com/annotations/).
