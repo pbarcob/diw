@@ -6,7 +6,7 @@
 /// rgb(71,148,133)
 /// @return {color}
 
-@function color_aleat{
+@function color_aleat(){
     //Funcion random para cada color
     $rojo: random(255);
     $verde: random(255);
